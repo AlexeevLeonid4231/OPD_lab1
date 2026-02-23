@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Портал «Профессии в ИТ»</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Профессии в ИТ</div>
+      <nav class="nav" id="main-nav">
+        <button class="nav-toggle" id="nav-toggle">≡</button>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="#home" data-link>Главная</a></li>
+          <li><a href="#goals" data-link>Цель и задачи</a></li>
+          <li><a href="#users" data-link>Типы пользователей</a></li>
+          <li><a href="#roles" data-link>Роли и сценарии</a></li>
+          <li><a href="#structure" data-link>Структура</a></li>
+          <li><a href="#modules" data-link>Модули</a></li>
+          <li><a href="#professions" data-link>Профессии</a></li>
+          <li><a href="#groups" data-link>Рабочие группы</a></li>
+          <li class="auth-only" data-role="user"><a href="#user" data-link>Кабинет</a></li>
+          <li class="auth-only" data-role="expert"><a href="#expert" data-link>Эксперт</a></li>
+          <li class="auth-only" data-role="consultant"><a href="#consultant" data-link>Консультант</a></li>
+          <li class="auth-only" data-role="admin"><a href="#admin" data-link>Админ</a></li>
+          <li class="guest-only"><a href="#login" data-link>Вход</a></li>
+          <li class="guest-only"><a href="#register" data-link>Регистрация</a></li>
+          <li class="auth-only"><button id="logout-btn" class="linklike">Выход</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" data-section>
+      <h1>Портал «Профессии в ИТ»</h1>
+      <p>Открытая часть Портала демонстрирует описания ключевых профессий в сфере информационных технологий, пути развития и необходимые компетенции.</p>
+      <div class="cards" id="home-cards">
+        <div class="card">
+          <h3>Профессии</h3>
+          <p>Каталог профессий с фильтрами и оценками экспертов.</p>
+          <a href="#professions" data-link class="btn">Перейти</a>
+        </div>
+        <div class="card">
+          <h3>Цель и задачи</h3>
+          <p>Назначение Портала, учебные цели и ожидаемые результаты.</p>
+          <a href="#goals" data-link class="btn">Подробнее</a>
+        </div>
+        <div class="card">
+          <h3>Роли и сценарии</h3>
+          <p>Описание типов пользователей и поведения системы.</p>
+          <a href="#roles" data-link class="btn">Изучить</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="goals" data-section hidden>
+      <h2>Цель и задачи Портала</h2>
+      <p>Цель — предоставить студентам структурированную информацию о профессиях в ИТ и смоделировать процессы взаимодействия ролей с системой.</p>
+      <ul>
+        <li>Собрать описания профессий и требований.</li>
+        <li>Продемонстрировать сценарии для ролей: администратор, зарегистрированный пользователь, эксперт, консультант.</li>
+        <li>Обеспечить форму регистрации и личный кабинет.</li>
+        <li>Смоделировать оценки экспертов и консультации.</li>
+      </ul>
+    </section>
+
+    <section id="users" data-section hidden>
+      <h2>Типы пользователей Портала</h2>
+      <ul class="list-def">
+        <li><strong>Гость</strong> — просматривает открытые разделы.</li>
+        <li><strong>Зарегистрированный пользователь</strong> — получает доступ к кабинету и запросу консультаций.</li>
+        <li><strong>Эксперт</strong> — оценивает профессии, оставляет рецензии.</li>
+        <li><strong>Консультант</strong> — проводит консультации, даёт рекомендации.</li>
+        <li><strong>Администратор</strong> — управляет сущностями Портала.</li>
+      </ul>
+    </section>
+
+    <section id="roles" data-section hidden>
+      <h2>Роли и сценарии поведения</h2>
+      <div class="grid-two">
+        <div>
+          <h3>Сценарии гостей</h3>
+          <ul>
+            <li>Просмотр каталога профессий</li>
+            <li>Чтение целей, структуры, модулей</li>
+            <li>Регистрация и вход</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Сценарии зарегистрированных пользователей</h3>
+          <ul>
+            <li>Просмотр и сохранение избранных профессий</li>
+            <li>Запрос консультации</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Сценарии экспертов</h3>
+          <ul>
+            <li>Выставление оценок профессиям</li>
+            <li>Краткие рецензии</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Сценарии консультантов</h3>
+          <ul>
+            <li>Создание консультаций и рекомендаций</li>
+            <li>История консультаций</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Сценарии администраторов</h3>
+          <ul>
+            <li>Управление профессиями (локально)</li>
+            <li>Управление пользователями (локально)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="structure" data-section hidden>
+      <h2>Структура Портала</h2>
+      <ul class="list-def">
+        <li>Открытая часть: главная, цели, типы пользователей, роли, структура, модули, профессии, рабочие группы.</li>
+        <li>Закрытая часть: кабинеты ролей и операции по ролям.</li>
+        <li>Данные: встроенный JSON и локальное хранилище браузера.</li>
+        <li>Развёртывание: статический хостинг (например, GitHub Pages).</li>
+      </ul>
+    </section>
+
+    <section id="modules" data-section hidden>
+      <h2>Модули Портала</h2>
+      <ul class="list-def">
+        <li>Каталог профессий</li>
+        <li>Регистрация и вход</li>
+        <li>Оценки экспертов</li>
+        <li>Консультации</li>
+        <li>Администрирование</li>
+      </ul>
+    </section>
+
+    <section id="professions" data-section hidden>
+      <h2>Профессии в ИТ</h2>
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Поиск по названию">
+        <select id="category-filter">
+          <option value="">Все категории</option>
+          <option value="Разработка">Разработка</option>
+          <option value="Тестирование">Тестирование</option>
+          <option value="Аналитика">Аналитика</option>
+          <option value="Инфраструктура">Инфраструктура</option>
+          <option value="Дизайн">Дизайн</option>
+        </select>
+      </div>
+      <div id="prof-list" class="cards"></div>
+    </section>
+
+    <section id="groups" data-section hidden>
+      <h2>Рабочие группы студентов</h2>
+      <div class="grid-two">
+        <div class="card">
+          <h3>Роли в команде</h3>
+          <ul>
+            <li>Тимлид</li>
+            <li>Frontend-разработчик</li>
+            <li>Backend-разработчик</li>
+            <li>Аналитик</li>
+            <li>Тестировщик</li>
+            <li>Дизайнер</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Распределение задач</h3>
+          <p>Команда планирует задачи спринтами, распределяя ответственность по ролям. Критерии готовности и взаимные ревью обязательны.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="login" data-section hidden>
+      <h2>Вход</h2>
+      <div class="auth-grid">
+        <form id="login-form" class="card form">
+          <label>Email<input type="email" id="login-email" required></label>
+          <label>Пароль<input type="password" id="login-password" required></label>
+          <button type="submit" class="btn">Войти</button>
+          <p class="muted">Демо: admin@demo, expert@demo, consultant@demo, user@demo с паролем demo123</p>
+        </form>
+        <div class="card">
+          <h3>Нет аккаунта?</h3>
+          <a href="#register" data-link class="btn">Зарегистрироваться</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="register" data-section hidden>
+      <h2>Регистрация</h2>
+      <form id="register-form" class="card form">
+        <label>Имя<input type="text" id="reg-name" required></label>
+        <label>Email<input type="email" id="reg-email" required></label>
+        <label>Пароль<input type="password" id="reg-password" required minlength="6"></label>
+        <button type="submit" class="btn">Создать аккаунт</button>
+        <p class="muted">Роль будет назначена: пользователь</p>
+      </form>
+    </section>
+
+    <section id="user" data-section hidden>
+      <h2>Личный кабинет</h2>
+      <div id="user-info" class="card"></div>
+      <div class="grid-two">
+        <div class="card">
+          <h3>Избранные профессии</h3>
+          <div id="favorites"></div>
+        </div>
+        <div class="card">
+          <h3>Запрос консультации</h3>
+          <form id="request-consult-form" class="form">
+            <label>Тема<input id="consult-topic" required></label>
+            <label>Сообщение<textarea id="consult-message" rows="4" required></textarea></label>
+            <button class="btn" type="submit">Отправить запрос</button>
+          </form>
+          <div id="my-consultations"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="expert" data-section hidden>
+      <h2>Кабинет эксперта</h2>
+      <div id="expert-queue" class="cards"></div>
+    </section>
+
+    <section id="consultant" data-section hidden>
+      <h2>Кабинет консультанта</h2>
+      <form id="consultant-form" class="card form">
+        <label>Email пользователя<input id="cons-email" type="email" required></label>
+        <label>Рекомендации<textarea id="cons-reco" rows="4" required></textarea></label>
+        <button class="btn" type="submit">Создать консультацию</button>
+      </form>
+      <div id="all-consultations"></div>
+    </section>
+
+    <section id="admin" data-section hidden>
+      <h2>Панель администратора</h2>
+      <div class="grid-two">
+        <div class="card">
+          <h3>Профессии</h3>
+          <form id="add-prof-form" class="form">
+            <label>Название<input id="new-prof-title" required></label>
+            <label>Категория
+              <select id="new-prof-cat" required>
+                <option value="Разработка">Разработка</option>
+                <option value="Тестирование">Тестирование</option>
+                <option value="Аналитика">Аналитика</option>
+                <option value="Инфраструктура">Инфраструктура</option>
+                <option value="Дизайн">Дизайн</option>
+              </select>
+            </label>
+            <label>Описание<textarea id="new-prof-desc" rows="3" required></textarea></label>
+            <button class="btn" type="submit">Добавить</button>
+          </form>
+          <div id="admin-prof-list"></div>
+        </div>
+        <div class="card">
+          <h3>Пользователи</h3>
+          <div id="admin-users"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© Портал «Профессии в ИТ»</div>
+      <div><a href="report.html">Отчет по ЛР №1</a></div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
